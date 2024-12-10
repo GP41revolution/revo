@@ -1,0 +1,12 @@
+specVersion: "v1beta"
+serviceId: "revo"
+location: "us-central1"
+schema:
+  source: "./schema"
+  datasource:
+    postgresql:
+      database: "fdcdb"
+      cloudSql:
+        instanceId: "revo-fdc"
+      # schemaValidation: "COMPATIBLE"
+connectorDirs: ["./connector"]

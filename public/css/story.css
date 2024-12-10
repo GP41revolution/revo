@@ -1,0 +1,199 @@
+.story {
+    padding: 0;
+    /* Add padding for spacing above and below the section */
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.story-content {
+    background: linear-gradient(to bottom, #1c1c1c, #3a3a3a);
+    color: #f8f9fa;
+    padding: 60px;
+    /* Increased padding to add more space around the content */
+    border: 2px solid #ff4d4d;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(255, 0, 0, 0.5);
+    text-align: center;
+    /* margin: 20px auto; */
+    /* Added margin to separate from surrounding elements */
+}
+
+.story-content h2 {
+    color: #ff4d4d;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+    margin-bottom: 30px;
+    /* Increased bottom margin to separate from paragraph */
+    font-size: 2.2em;
+    /* Slightly larger font for better emphasis */
+}
+
+.story-content p {
+    font-size: 1.3em;
+    /* Slightly larger text for better readability */
+    line-height: 1.8;
+    /* Increased line-height for more comfortable reading */
+    margin-bottom: 25px;
+    /* Added more space between paragraphs */
+}
+
+.story-content:hover {
+    background: linear-gradient(to bottom, #3a3a3a, #ff6666);
+    transition: background 0.3s ease-in-out;
+}
+
+.fis-container {
+    margin-top: 40px;
+}
+
+.fis {
+    width: 250px;
+    /* Slightly larger image for more prominence */
+    height: auto;
+}
+
+.shake {
+    animation: shake 0.5s ease-in-out infinite;
+}
+
+.conti {
+    max-width: 900px;
+    margin: 40px auto;
+    background-color: white;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    overflow: hidden;
+    padding: 20px;
+    /* 上下の余白追加 */
+}
+
+.conto {
+    padding: 20px;
+    /* 内部の余白を適切に設定 */
+}
+
+.story-section {
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+    /* 画面サイズに合わせて折り返し */
+}
+
+.story-image {
+    width: 200px;
+    height: 200px;
+    background: url('/api/placeholder/400/400') no-repeat center center;
+    background-size: cover;
+    border-radius: 15px;
+    margin-right: 30px;
+    flex-shrink: 0;
+    /* 画像が縮まないように設定 */
+}
+
+.story-text {
+    flex: 1;
+    min-width: 200px;
+    /* テキスト部分の最小幅を設定 */
+}
+
+.highlight {
+    color: #2c7fb8;
+    font-weight: bold;
+}
+
+/* スマートフォン向けレスポンシブ */
+@media (max-width: 600px) {
+    .story-section {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .story-image {
+        margin-right: 0;
+        margin-bottom: 20px;
+        /* 画像とテキストの間に余白 */
+        width: 150px;
+        height: 150px;
+    }
+}
+
+
+@keyframes shake {
+
+    0%,
+    100% {
+        transform: rotate(0deg);
+    }
+
+    25% {
+        transform: rotate(-5deg);
+    }
+
+    75% {
+        transform: rotate(5deg);
+    }
+}
+
+@media (max-width: 768px) {
+    .story-content {
+        padding: 30px;
+        /* Increased padding on smaller screens for better spacing */
+    }
+
+    .story-content h2 {
+        font-size: 1.8em;
+        /* Adjusted font size for smaller screens */
+        margin-bottom: 25px;
+        /* Added margin below for spacing */
+    }
+
+    .story-content p {
+        font-size: 1.1em;
+        /* Slightly adjusted font size for readability */
+        margin-bottom: 20px;
+        /* More space between paragraphs */
+    }
+}
+
+
+:root {
+    --primary: #00B4DB;
+    --secondary: #0083B0;
+    --accent: #FF6B6B;
+    --text: #2D3436;
+}
+
+.danger {
+    padding: 60px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.card {
+    background: white;
+    border-radius: 20px;
+    padding: 30px;
+    margin: 20px 0;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    transform: translateY(0);
+    transition: all 0.3s ease;
+}
+
+/* .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+} */
+
+.danger-card {
+    background: linear-gradient(135deg, var(--accent), #FF8E53);
+    color: white;
+}
+
+.mission-card {
+    background: linear-gradient(135deg, #43e97b, #38f9d7);
+    color: white;
+}

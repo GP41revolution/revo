@@ -7,63 +7,324 @@
     <title>浄水戦隊アクアガーディアンズ！</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    <!-- GSAP - より高度なアニメーション用 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <!-- Swiper - スライダー用 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.4.7/swiper-bundle.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.4.7/swiper-bundle.min.js"></script>
+    <!-- ScrollReveal - スクロールアニメーション用 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/scrollReveal.js/4.0.9/scrollreveal.min.js"></script>
+    <!-- Particles.js - パーティクルアニメーション用 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js"></script>
+
+
+    <!-- Three.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/0.159.0/three.min.js"></script>
+    <!-- Three.jsの追加ライブラリ -->
+    <script src="https://cdn.jsdelivr.net/npm/three@0.159.0/examples/js/controls/OrbitControls.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.159.0/examples/js/loaders/GLTFLoader.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.159.0/examples/js/postprocessing/EffectComposer.js"></script>
 
     <!-- css -->
     <link rel="stylesheet" href="css/style.css">
-
+    <link rel="stylesheet" href="css/top.css">
+    <link rel="stylesheet" href="css/story.css">
+    <link rel="stylesheet" href="css/area.css">
+    <link rel="stylesheet" href="css/features.css">
+    <link rel="stylesheet" href="css/game.css">
+    <link rel="stylesheet" href="css/contact.css">
 
     <!-- favicon -->
-    <link rel="icon" href="img/tate.png">
-    <link rel="shortcut icon" href="img/tate.png">
+    <link rel="icon" href="img/tate1.png">
+    <link rel="shortcut icon" href="img/tate1.png">
 
 </head>
 
 <body>
-    <nav class="nav">
+    <!-- <div class="water-drop"></div>
+    <div class="wave-container">
+        <div class="wave"></div>
+        <div class="wave"></div>
+        <div class="wave"></div>
+    </div> -->
 
+
+
+    <nav class="nav">
         <div class="logos">
-            <img class="logo" src="./img/tate.png">
+            <img class="logo" src="./img/tate1.png">
             <a href="#" class="nav-logo">AQUA GUARDIAN</a>
         </div>
 
+        <button class="hamburger">
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+        </button>
+
         <div class="nav-links">
+            <a href="#story" class="nav-link">概要</a>
+            <a href="#stage" class="nav-link">エリア</a>
             <a href="#features" class="nav-link">特徴</a>
-            <a href="#gameplay" class="nav-link">ゲームプレイ</a>
-            <a href="#areas" class="nav-link">エリア</a>
+            <a href="#gameplay" class="nav-link">機能</a>
+            <a href="#contact" class="nav-link">お問い合わせ</a>
         </div>
     </nav>
 
     <section class="hero">
         <div class="hero-bg"></div>
-        <div class="hero-content">
+        <div class="hero-content" data-aos="zoom-out">
             <h1>AQUA GUARDIAN</h1>
             <p>新宿区の未来を守る、新感覚アクションゲーム</p>
-            <a href="#" class="download-btn">今すぐプレイ</a>
+            <!-- <a href="#" class="download-btn">今すぐプレイ</a> -->
         </div>
     </section>
 
+
+
+
+    <!-- 背景 -->
+    <section id="story" class="story">
+        <div class="container"></div>
+        <div class="story-content">
+            <h2>新宿区の水環境が危ない！</h2>
+            <p>
+                新宿区では、急激な都市化と気候変動により、川や湖が未知の汚染物質に侵されています。
+                <br>放置すれば、街の生態系と市民の生活が深刻な影響を受けるでしょう。<br>
+            </p>
+            <p>
+                特殊な光の力を使い、あなたの活躍で、新宿区の川や湖に再び生命が宿しましょう！
+            </p>
+
+            <div class="fis-container" data-aos="flip-left">
+                <img src="./img/sakanana.png" alt="Sick fis" class="fis shake">
+            </div>
+        </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="danger">
+
+            <div class="card mission-card">
+                <h2 style="font-size: 2em; margin-top: 0;">✨ 我々の使命 ✨</h2>
+                <p style="font-size: 1.2em;">特殊な光の力を駆使し、新宿区の水環境を守ります。私たちアクアガーディアンズの活躍により、新宿区の川や湖に再び命が宿り、美しい水の環境を取り戻します！
+                </p>
+            </div>
+        </div>
+
+    </section>
+
+
+    <!-- エリア -->
+    <section id="stage" class="stage-section">
+        <div class="stage-title">
+            <h2>各エリアのステージ</h2>
+            <p>新宿区の各エリアで待ち受ける様々な課題に挑戦しよう！</p>
+        </div>
+
+        <div class="stage-grid">
+            <div class="stage-card" data-aos="flip-left">
+                <img src="./img/sinjuku.jpg" alt="新宿駅周辺エリア" class="stage-image">
+                <div class="stage-content">
+                    <h3>新宿駅周辺エリア</h3>
+                    <p class="stage-description">都会の喧騒の中で繰り広げられる、新たな浄水の戦い。高度な技術が試される中級者向けステージ。</p>
+                    <div class="stage-info">
+                        <div class="difficulty">
+                            難易度: <span class="difficulty-stars">★★★</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="stage-card" data-aos="flip-left" data-aos-delay="200">
+                <img src="./img/takada.jpg" alt="高田馬場エリア" class="stage-image">
+                <div class="stage-content">
+                    <h3>高田馬場エリア</h3>
+                    <p class="stage-description">学生の街で発生した環境問題。若者たちと協力して解決を目指そう！</p>
+                    <div class="stage-info">
+                        <div class="difficulty">
+                            難易度: <span class="difficulty-stars">★★★</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="stage-card" data-aos="flip-left" data-aos-delay="400">
+                <img src="./img/yotu.jpg" alt="四谷エリア" class="stage-image">
+                <div class="stage-content">
+                    <h3>四谷エリア</h3>
+                    <p class="stage-description">歴史ある街並みを舞台に、基本的なスキルを学ぼう。初心者向け入門ステージ。</p>
+                    <div class="stage-info">
+                        <div class="difficulty">
+                            難易度: <span class="difficulty-stars">★★</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="stage-card" data-aos="flip-left">
+                <img src="./img/kagu.jpg" alt="神楽坂エリア" class="stage-image">
+                <div class="stage-content">
+                    <h3>神楽坂エリア</h3>
+                    <p class="stage-description">神楽坂の伝統的な街並みを守るため、水質改善を目指した挑戦が待っている！</p>
+                    <div class="stage-info">
+                        <div class="difficulty">
+                            難易度: <span class="difficulty-stars">★</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="stage-card" data-aos="flip-left" data-aos-delay="200">
+                <img src="./img/otiai.jpg" alt="落合エリア" class="stage-image">
+                <div class="stage-content">
+                    <h3>落合エリア</h3>
+                    <p class="stage-description">落合の静かな住宅街で、自然環境を回復するミッションを遂行しよう！</p>
+                    <div class="stage-info">
+                        <div class="difficulty">
+                            難易度: <span class="difficulty-stars">★</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
+
+
+
+    <!-- <div class="fish-body">
+          <div class="eye">
+            <div class="pupil"></div>
+          </div>
+        </div>
+        <div class="fin"></div>
+        <div class="fin fin-bottom"></div>
+      </div> <div class="fish">
+      <div class="bubbles bubble-1"></div>
+      <div class="bubbles bubble-5"></div>
+      <div class="bubbles bubble-2"></div>
+      <div class="bubbles bubble-6"></div>
+      <div class="bubbles bubble-3"></div>
+      <div class="bubbles bubble-7"></div>
+      <div class="bubbles bubble-4"></div>
+      <div class="bubbles bubble-8"></div> -->
+
+
+    <!-- 特徴 -->
     <section id="features" class="features">
         <h2 class="section-title">ゲームの特徴</h2>
-        <div class="feature-grid">
-            <div class="feature-card" data-aos="fade-up">
+        <div class="feature-container">
+            <div class="feature-item" data-aos="fade-left">
                 <div class="feature-icon">🎮</div>
-                <h3>直感的な操作</h3>
-                <p>光の色を切り替えながら、タップで汚染物質を除去。誰でも簡単に楽しめます。</p>
+                <div class="feature-content">
+                    <h3 class="feature-heading">直感的な操作</h3>
+                    <p class="feature-description">光の色を切り替えながら、タップで汚染物質を除去。誰でも簡単に楽しめます！</p>
+                </div>
             </div>
-            <div class="feature-card" data-aos="fade-up" data-aos-delay="100">
+            <div class="feature-item" data-aos="fade-right">
                 <div class="feature-icon">🗺️</div>
-                <h3>リアルな地域設定</h3>
-                <p>新宿区の実際の地理データに基づいた、エリアごとの特徴的なステージ。</p>
+                <div class="feature-content">
+                    <h3 class="feature-heading">地域設定</h3>
+                    <p class="feature-description">新宿区の実際の地理データに基づいた、特徴的なステージ。</p>
+                </div>
             </div>
-            <div class="feature-card" data-aos="fade-up" data-aos-delay="200">
+            <div class="feature-item" data-aos="fade-left">
                 <div class="feature-icon">🏆</div>
-                <h3>競争要素</h3>
-                <p>リアルタイムランキングで他のプレイヤーと競争。自己ベストに挑戦！</p>
+                <div class="feature-content">
+                    <h3 class="feature-heading">競争要素</h3>
+                    <p class="feature-description">リアルタイムランキングで他のプレイヤーと競争。自己ベストに挑戦！</p>
+                </div>
             </div>
         </div>
     </section>
 
-    <section id="gameplay" class="gameplay">
+
+  
+
+    <!-- <div class="container">
+                    <div class="bowl"></div>
+                    <div class="water">
+                        <div class="body">
+                            <div class="eye"></div>
+                            <div class="speech-bubble">今すぐプレイ！<br>右のQRコードを読み取ってね</div>
+                            <div class="fin-center"></div>
+                            <div class="fin top"></div>
+                            <div class="fin bottom"></div>
+                            <div class="tail"></div>
+                        </div>
+                    </div>
+                </div> -->
+
+
+
+
+
+
+    <!-- <section class="community">
+        <div class="container">
+            <h2 class="section-title">コミュニティ</h2>
+            <div class="community-content">
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="count-up" data-value="10000">0</div>
+                        <p>プレイヤー数</p>
+                    </div>
+                    <div class="stat-card">
+                        <div class="count-up" data-value="50000">0</div>
+                        <p>クリア回数</p>
+                    </div>
+                </div>
+                <div class="social-links">
+                    <a href="#" class="social-link">Twitter</a>
+                    <a href="#" class="social-link">Discord</a>
+                    <a href="#" class="social-link">YouTube</a>
+                </div>
+            </div>
+        </div>
+    </section> -->
+
+
+    <!-- お問い合わせ -->
+    <!-- <section id="contact" class="contact">
+        <div class="contact-content">
+            <h2 class="section-title">お問い合わせ</h2>
+            <div class="contact-form">
+                <form>
+                    <div class="form-group">
+                        <label for="name">お名前</label>
+                        <input type="text" id="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">メールアドレス</label>
+                        <input type="email" id="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">メッセージ</label>
+                        <textarea id="message" required></textarea>
+                    </div>
+                    <button type="submit" class="submit-btn">送信する</button>
+                </form>
+            </div>
+        </div>
+    </section> -->
+
+
+    <header>
+        <section id="contact">
+            <h1>Game Play</h1>
+        </section>
+    </header>
+
+    <div id="form">
+
+        <div class="fish" id="fish"></div>
+        <div class="fish" id="fish2"></div>
+
         <div class="gameplay-content">
             <div class="gameplay-text" data-aos="fade-right">
                 <h2>ゲームプレイ</h2>
@@ -72,41 +333,23 @@
                     <li>✓ 3種類の光の色を使い分け</li>
                     <li>✓ エリアごとに変化する難易度</li>
                     <li>✓ リアルタイムスコア反映</li>
-                    <li>✓ 特殊パワーアップアイテム</li>
                 </ul>
             </div>
-            <div class="image-container">
-                <img src="./img/qr.png" alt="QRコード" class="gameplay-image" />
+            <div class="image-container" data-aos="fade-left">
+                <a href="https://your-app-link.com" target="_blank">
+                    <img src="./img/qr2.png" alt="QRコード" class="gameplay-image" />
+                </a>
             </div>
         </div>
+    </div>
     </section>
 
-    <section id="areas" class="area-section">
-        <h2 class="section-title">プレイエリア</h2>
-        <div class="area-grid">
-            <div class="area-card" data-aos="zoom-in">
-                <h3>新宿御苑エリア</h3>
-                <p>豊かな自然と都会が調和する、中級者向けステージ</p>
-                <p>難易度: ★★</p>
-            </div>
-            <div class="area-card" data-aos="zoom-in" data-aos-delay="100">
-                <h3>歌舞伎町エリア</h3>
-                <p>にぎやかな街並みの中、高難度な挑戦が待っている</p>
-                <p>難易度: ★★★</p>
-            </div>
-            <div class="area-card" data-aos="zoom-in" data-aos-delay="200">
-                <h3>四谷エリア</h3>
-                <p>歴史ある街並みを舞台に、基本を学べる入門ステージ</p>
-                <p>難易度: ★</p>
-            </div>
-        </div>
-    </section>
 
-    <section class="cta">
+    <!-- <section class="cta">
         <h2>新宿区の水環境を守るのは、あなた次第！</h2>
         <p style="font-size: 1.2rem; margin: 20px 0;">今すぐアクアガーディアンになろう</p>
         <a href="#" class="download-btn">無料でプレイ</a>
-    </section>
+    </section> -->
 
     <footer>
         <p>© 2024 アクアガーディアン All Rights Reserved.</p>
