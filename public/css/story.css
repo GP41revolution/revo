@@ -59,105 +59,285 @@
     animation: shake 0.5s ease-in-out infinite;
 }
 
-.conti {
-    max-width: 900px;
-    margin: 40px auto;
-    background-color: white;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-    border-radius: 15px;
-    overflow: hidden;
-    padding: 20px;
-    /* 上下の余白追加 */
+
+
+
+
+
+.story-title {
+    text-align: center;
+    margin-bottom: 4rem;
+    position: relative;
+    margin-top: 5rem;
 }
 
-.conto {
+.story-title h2 {
+    font-size: 3.5rem;
+    position: relative;
+    display: inline-block;
+    color: #000;
+}
+
+.nintendo-title {
+    font-size: 2em;
+    color: #e60012;
+    margin-bottom: 20px;
+    text-align: center;
+    font-weight: bold;
+    -webkit-text-stroke: 1px black;
+}
+
+.nintendo-title1 {
+    font-size: 2em;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+    text-align: center;
+    font-weight: bold;
+    -webkit-text-stroke: 1px black;
+}
+
+.nintendo-title2 {
+    font-size: 2em;
+    color: #00e632;
+    margin-bottom: 20px;
+    text-align: center;
+    font-weight: bold;
+    -webkit-text-stroke: 1px black;
+}
+
+.nintendo-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: stretch;
+    /* 高さを揃える */
+    max-width: 100%;
+    margin: 0 auto;
+    border-radius: 20px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
     padding: 20px;
-    /* 内部の余白を適切に設定 */
+    overflow-x: auto;
+    gap: 20px;
 }
 
 .story-section {
+    flex: 1 1 calc(33.333% - 20px);
     display: flex;
+    flex-direction: column;
     align-items: center;
-    margin-bottom: 30px;
-    flex-wrap: wrap;
-    /* 画面サイズに合わせて折り返し */
+    margin-bottom: 0;
+    background-color: #f0f8ff;
+    border: 4px solid #e60012;
+    border-radius: 15px;
+    padding: 20px;
+    text-align: center;
+    transition: all 0.3s ease;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.story-section1 {
+    flex: 1 1 calc(33.333% - 20px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 0;
+    background-color: #f0f8ff;
+    border: 4px solid var(--primary-color);
+    border-radius: 15px;
+    padding: 20px;
+    text-align: center;
+    transition: all 0.3s ease;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.story-section2 {
+    flex: 1 1 calc(33.333% - 20px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 0;
+    background-color: #f0f8ff;
+    border: 4px solid #00e632;
+    border-radius: 15px;
+    padding: 20px;
+    text-align: center;
+    transition: all 0.3s ease;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+
+.story-section:hover,
+.story-section1:hover,
+.story-section2:hover {
+    transform: scale(1.02);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
 }
 
 .story-image {
     width: 200px;
     height: 200px;
-    background: url('/api/placeholder/400/400') no-repeat center center;
+    background: url('../img/monster1.png') no-repeat center center;
     background-size: cover;
     border-radius: 15px;
-    margin-right: 30px;
-    flex-shrink: 0;
-    /* 画像が縮まないように設定 */
+    margin-bottom: 50px;
+    /* テキストとの間隔 */
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s;
+    border: 4px solid #e60012;
+}
+
+.story-image1 {
+    width: 200px;
+    height: 200px;
+    background: url('../img/monster2.png') no-repeat center center;
+    background-size: cover;
+    border-radius: 15px;
+    margin-bottom: 50px;
+    /* テキストとの間隔 */
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s;
+    border: 4px solid var(--primary-color);
+}
+
+.story-image2 {
+    width: 200px;
+    height: 200px;
+    background: url('../img/monster3.png') no-repeat center center;
+    background-size: cover;
+    border-radius: 15px;
+    margin-bottom: 50px;
+    /* テキストとの間隔 */
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s;
+    border: 4px solid #00e632;
+}
+
+
+
+
+.story-image:hover,
+.story-image1:hover,
+.story-image2:hover {
+    transform: rotate(5deg);
 }
 
 .story-text {
     flex: 1;
-    min-width: 200px;
-    /* テキスト部分の最小幅を設定 */
+    font-size: 2.2em;
 }
+
+.story-text h2 {
+    color: #e60012;
+    font-size: 1.8em;
+    margin-bottom: 15px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.story-text p {
+    flex: 1;
+    font-size: 1.3rem;
+}
+
 
 .highlight {
-    color: #2c7fb8;
+    color: #e60012;
     font-weight: bold;
+    text-decoration: underline;
 }
 
-/* スマートフォン向けレスポンシブ */
-@media (max-width: 600px) {
+.highlight1 {
+    color: var(--primary-color);
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.highlight2 {
+    color: #00e632;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+
+
+/* 既存のスタイルに追加 */
+@media (max-width: 1024px) {
     .story-section {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .story-image {
-        margin-right: 0;
-        margin-bottom: 20px;
-        /* 画像とテキストの間に余白 */
-        width: 150px;
-        height: 150px;
-    }
-}
-
-
-@keyframes shake {
-
-    0%,
-    100% {
-        transform: rotate(0deg);
-    }
-
-    25% {
-        transform: rotate(-5deg);
-    }
-
-    75% {
-        transform: rotate(5deg);
+        flex: 1 1 calc(50% - 20px);
+        /* タブレットサイズでは2列表示 */
     }
 }
 
 @media (max-width: 768px) {
-    .story-content {
-        padding: 30px;
-        /* Increased padding on smaller screens for better spacing */
+    .nintendo-container {
+        flex-direction: column;
+        /* 小さい画面では縦並び */
+        justify-content: flex-start;
+        padding: 10px;
     }
 
-    .story-content h2 {
-        font-size: 1.8em;
-        /* Adjusted font size for smaller screens */
-        margin-bottom: 25px;
-        /* Added margin below for spacing */
-    }
-
-    .story-content p {
-        font-size: 1.1em;
-        /* Slightly adjusted font size for readability */
+    .story-section {
+        width: 100%;
+        /* 横幅を100%に調整 */
         margin-bottom: 20px;
-        /* More space between paragraphs */
+        /* 各行の間隔 */
+    }
+
+    .story-image,
+    .story-image1,
+    .story-image2 {
+        width: 150px;
+        height: 150px;
+        /* モバイル端末に合わせて画像サイズを小さく */
+        margin-bottom: 30px;
+    }
+
+    .story-text h2 {
+        font-size: 1.5em;
+        /* 小さい画面ではフォントサイズを調整 */
+    }
+
+    .highlight,
+    .highlight1,
+    .highlight2 {
+        font-size: 1.1em;
+        /* ハイライト文字のサイズ調整 */
     }
 }
+
+@media (max-width: 480px) {
+    .story-section {
+        padding: 15px;
+        /* 小さい画面でのパディング調整 */
+    }
+
+    .story-image,
+    .story-image1,
+    .story-image2 {
+        width: 120px;
+        height: 120px;
+        /* さらに小さな画面用に画像サイズを調整 */
+    }
+
+    .story-text h2 {
+        font-size: 1.3em;
+        /* フォントサイズをさらに小さく */
+    }
+
+    .highlight,
+    .highlight1,
+    .highlight2 {
+        font-size: 1em;
+        /* ハイライト文字のサイズを調整 */
+    }
+}
+
+
+
+
+
+
+
+
 
 
 :root {

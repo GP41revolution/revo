@@ -1,6 +1,6 @@
 .features {
   padding: 6rem 0;
-  background: linear-gradient(135deg, #fff 0%, #f0f0f0 100%);
+  /* background: linear-gradient(135deg, #fff 0%, #f0f0f0 100%); */
   font-family: "Hiragino Kaku Gothic Pro", "メイリオ", sans-serif;
   overflow: hidden;
   position: relative;
@@ -85,7 +85,7 @@
 }
 
 .feature-description {
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   line-height: 1.8;
   color: #000;
   margin-top: 1rem;

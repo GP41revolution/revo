@@ -9,7 +9,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "Hiragino Kaku Gothic Pro", "ヒラギノ角ゴ Pro W3", "メイリオ", sans-serif;
+    /* font-family: "Hiragino Kaku Gothic Pro", "ヒラギノ角ゴ Pro W3", "メイリオ", sans-serif; */
 }
 
 /* ナビゲーションスタイル */
@@ -32,8 +32,25 @@
 }
 
 .logo {
-    height: 40px;
+    height: 60px;
     width: auto;
+}
+
+@media (max-width: 768px) {
+
+    /* タブレットサイズ以下 */
+    .logo {
+        height: 50px;
+        /* 高さを小さく */
+    }
+}
+
+@media (max-width: 480px) {
+
+    /* スマートフォンサイズ以下 */
+    .logo {
+        height: 60px;
+    }
 }
 
 .nav-logo {
@@ -105,10 +122,6 @@
 
     .nav-logo {
         font-size: 1.2rem;
-    }
-
-    .logo {
-        height: 30px;
     }
 }
 
