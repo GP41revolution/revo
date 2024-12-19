@@ -1,13 +1,11 @@
 {
   "hosting": {
-    "site": "aquaguardian",
+    "site": "pensuke",
     "public": "public",
-    "ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
-    "rewrites": [
-      {
-        "source": "**",
-        "destination": "/index.html"
-      }
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
     ]
   },
   "dataconnect": {
@@ -28,10 +26,22 @@
         "firebase-debug.*.log",
         "*.local"
       ],
-      "predeploy": ["npm --prefix \"$RESOURCE_DIR\" run lint"]
+      "predeploy": [
+        "npm --prefix \"$RESOURCE_DIR\" run lint"
+      ]
     }
   ],
   "database": {
     "rules": "database.rules.json"
-  }
+  },
+  "storage": {
+    "rules": "storage.rules"
+  },
+  
+    "emulators": {
+      "database": {
+        "host": "localhost",
+        "port": 9001 
+      }
+    } 
 }
