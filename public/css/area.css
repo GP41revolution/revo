@@ -54,7 +54,7 @@
     margin: 0 auto;
 }
 
-.stage-title h2::before,
+/* .stage-title h2::before,
 .stage-title h2::after {
     content: '★';
     position: absolute;
@@ -63,7 +63,7 @@
     font-size: 2rem;
     color: var(--primary-color);
     animation: bounce 1.5s infinite alternate;
-}
+} */
 
 .stage-title h2::before {
     left: -3.5rem;

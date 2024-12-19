@@ -235,6 +235,7 @@ body {
     gap: 60px;
     align-items: center;
     position: relative;
+    margin-bottom: 200px;
 }
 
 .gameplay-text {
@@ -982,13 +983,42 @@ body {
 
 .hero h1 {
     font-size: 5rem;
-    /* background: linear-gradient(120deg, #383737, #000000); */
-    background-color: #fff;
     /* 淡い青から濃い青 */
+    background: linear-gradient(120deg, #8abaff, #0056b3);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    text-shadow: 2px 2px 0px #f90, -2px -2px 0px
+    text-shadow: 2px 2px 0px #f90, -2px -2px 0px;
+    background-color: #fff;
 }
+
+/* レスポンシブ対応 */
+@media (max-width: 1024px) {
+    .hero h1 {
+        font-size: 4rem;
+        /* タブレット向けにフォントサイズを縮小 */
+        text-shadow: 1.5px 1.5px 0px #f90, -1.5px -1.5px 0px;
+        /* 影を調整 */
+    }
+}
+
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 3rem;
+        /* スマホ向けにさらにフォントサイズを縮小 */
+        text-shadow: 1px 1px 0px #f90, -1px -1px 0px;
+        /* 影を小さくして見やすく */
+    }
+}
+
+@media (max-width: 480px) {
+    .hero h1 {
+        font-size: 2.5rem;
+        /* 小さいスマホ用 */
+        text-shadow: 0.5px 0.5px 0px #f90, -0.5px -0.5px 0px;
+        /* より小さい影 */
+    }
+}
+
 
 
 /* ナビゲーション */
